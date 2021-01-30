@@ -1,17 +1,48 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-/*-----------------Inline styling for React elements---------------------
- In JSX inline styling is different, we cannot directly put it as 
- <h1 style="color:red">Hello World<h1>
+//---------------------------Challenge (Style according to time)--------------------------
+const currentTime = new Date();
+const hour = currentTime.getHours();
+var time;
+const customStyle = {
+  color: "black"
+};
+
+if (hour > 0 && hour <= 11) {
+  time = "Good Morning";
+  customStyle.color = "green";
+} else if (hour > 11 && hour <= 17) {
+  time = "Good Afternoon";
+  customStyle.color = "red";
+} else if (hour > 17 && hour <= 21) {
+  time = "Good Evening";
+  customStyle.color = "blue";
+} else {
+  time = "Good Night";
+  customStyle.color = "yellow";
+}
+
+ReactDOM.render(
+  <h1 className="heading" style={customStyle}>
+    {time}
+  </h1>,
+  document.getElementById("root")
+);
+
+/*-------------------------Inline styling for React elements-----------------------------
+ 
+*In JSX inline styling is different, we cannot directly put it as 
+ <h1 style="color:red">Hello World</h1>
  instead style property will need javascript object as the value.
  Eg. {
       color:"red"
      }
  We need to pass it inside {} as it is js inside html text.
- Although inliine property is used rarely but it is used to change the style property on the fly.
+ 
+*Although inline property is used rarely but it is used to change the style property on the fly.
 
-*/
+
 const customStyle = {
   color: "Green",
   fontSize: "20px"
@@ -26,8 +57,9 @@ ReactDOM.render(
   </div>,
   document.getElementById("root")
 );
+*/
 
-/*------------Javascipt properties as attributes in JSX and styling-------------
+/*-----------------Javascipt properties as attributes in JSX and styling-----------------------
 
 * Attributes name should be written in camelCase only as javascript not like in HTMl.
 eg. contenteditable --> contentEditable
@@ -68,7 +100,7 @@ ReactDOM.render(
 );
 */
 
-/*--------------------JSX-------------------------- 
+/*-------------------------------JSX--------------------------------------
 const fname = "Saloni";
 const lname = "Subedi";
 const currentDate = new Date();
