@@ -1,7 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import App from "./components/App";
 
-//---------------------------Challenge (Style according to time)--------------------------
+/*--------------------------------React Components----------------------------------
+They use PascalCase for filenames because a React component is nothing but a class.
+*/
+
+ReactDOM.render(<App></App>, document.getElementById("root"));
+
+/*---------------------------Challenge (Style according to time)--------------------------
 const currentTime = new Date();
 const hour = currentTime.getHours();
 var time;
@@ -29,6 +36,7 @@ ReactDOM.render(
   </h1>,
   document.getElementById("root")
 );
+*/
 
 /*-------------------------Inline styling for React elements-----------------------------
  
