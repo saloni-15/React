@@ -1,11 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-/*Javascipt properties as attributes in JSX and styling
+/*------------Javascipt properties as attributes in JSX and styling-------------
 
-Attributes name should be written in camelCase only as javascript not like in HTMl.
+* Attributes name should be written in camelCase only as javascript not like in HTMl.
+eg. contenteditable --> contentEditable
 
-eg. contenteditable --> contentEditable*/
+* Selfclosing tag must have an end tag in JSX unlike in HTML
+eg. <img />
+
+* CSS properties can be applied in JSX same as HTML but with some rules.
+*/
 const image = "https://picsum.photos/200";
 ReactDOM.render(
   <div>
