@@ -1,6 +1,32 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+/*-----------------Inline styling for React elements---------------------
+ In JSX inline styling is different, we cannot directly put it as 
+ <h1 style="color:red">Hello World<h1>
+ instead style property will need javascript object as the value.
+ Eg. {
+      color:"red"
+     }
+ We need to pass it inside {} as it is js inside html text.
+ Although inliine property is used rarely but it is used to change the style property on the fly.
+
+*/
+const customStyle = {
+  color: "Green",
+  fontSize: "20px"
+};
+
+customStyle.color = "blue";
+
+ReactDOM.render(
+  <div>
+    <h1 style={{ color: "red" }}>Hello World!</h1>
+    <p style={customStyle}> Neque convallis a cras semper auctor neque.</p>
+  </div>,
+  document.getElementById("root")
+);
+
 /*------------Javascipt properties as attributes in JSX and styling-------------
 
 * Attributes name should be written in camelCase only as javascript not like in HTMl.
@@ -10,7 +36,7 @@ eg. contenteditable --> contentEditable
 eg. <img />
 
 * CSS properties can be applied in JSX same as HTML but with some rules.
-*/
+
 const image = "https://picsum.photos/200";
 ReactDOM.render(
   <div>
@@ -40,6 +66,7 @@ ReactDOM.render(
   </div>,
   document.getElementById("root")
 );
+*/
 
 /*--------------------JSX-------------------------- 
 const fname = "Saloni";
